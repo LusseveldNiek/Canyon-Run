@@ -242,6 +242,9 @@ MonoBehaviour:
   v: {x: 0, y: 0, z: 0}
   time: 0
   timeObstakel: 0
+  speed: 0.0001
+  left: 0
+  timeLeft: 0
 --- !u!111 &850335312
 Animation:
   m_ObjectHideFlags: 0
