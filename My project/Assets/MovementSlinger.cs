@@ -20,16 +20,16 @@ public class MovementSlinger : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(time < 4)
+        if(time < 3)
         {
              transform.Rotate(Vector3.right * speed * Time.deltaTime);
         }
 
-        if(time > 4)
+        if(time > 3)
         {
             transform.Rotate(Vector3.left * speed * Time.deltaTime);
             timeRight += Time.deltaTime;
-            if(timeRight > 4)
+            if(timeRight > 3)
             {
                 timeRight = 0;
                 time = 0;
