@@ -15,10 +15,21 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        v.x = Input.GetAxis("Horizontal");
-        v.z = Input.GetAxis("Vertical");
-        transform.Translate(v * speed);
+         transform.Translate(v * speed * Time.deltaTime);
 
 
     }
+
+    
+
+    void OnCollisionStay()
+    {
+        v.x = Input.GetAxis("Horizontal");
+        v.z = Input.GetAxis("Vertical");
+       
+    }
+
+    
+
+    
 }

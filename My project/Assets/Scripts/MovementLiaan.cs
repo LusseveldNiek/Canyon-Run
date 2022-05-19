@@ -26,7 +26,7 @@ public class MovementLiaan : MonoBehaviour
         {
             transform.Rotate(Vector3.left * speed * Time.deltaTime);
             timeRight += Time.deltaTime;
-            if(timeRight > 5)
+            if(timeRight > 3)
             {
                 timeRight = 0;
                 time = 0;
