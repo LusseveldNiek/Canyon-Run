@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameOver
+  - RollendeBallen
   layers:
   - Default
   - TransparentFX

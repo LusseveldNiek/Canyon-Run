@@ -20,7 +20,7 @@ public class LiaanVasthouden : MonoBehaviour
         {
             if(Input.GetButton("Fire1"))
             {
-                player.transform.position = transform.position;
+                other.gameObject.transform.position = transform.position;
             }   
         }
 

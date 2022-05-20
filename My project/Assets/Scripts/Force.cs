@@ -19,9 +19,12 @@ public class Force : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        GameObject _exp = Instantiate(exp, transform.position, transform.rotation);
-        Destroy(_exp, 3.0f);
-        KnockBack();
+        if(other.gameObject.tag == "Player")
+        {
+            GameObject _exp = Instantiate(exp, transform.position, transform.rotation);
+            Destroy(_exp, 3.0f);
+            KnockBack();
+        }
     }
 
     void KnockBack()

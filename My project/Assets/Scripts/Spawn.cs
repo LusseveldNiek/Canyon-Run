@@ -16,6 +16,11 @@ public class Spawn : MonoBehaviour
             respawn = true;
             
         }
+
+        if(collision.gameObject.tag == "RollendeBallen")
+        {
+            Destroy(collision.transform.gameObject);
+        }
     }   
     
     
