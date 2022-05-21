@@ -17,7 +17,7 @@ public class SpawnStone : MonoBehaviour
     {
         int randomIndex = Random.Range(0, myObjects.Length);
         spawnTime += Time.deltaTime;
-        if(spawnTime > 5)
+        if(spawnTime > 3)
         {
             GameObject instantiatedObject = Instantiate(myObjects[randomIndex], transform.position, Quaternion.identity) as GameObject;
             spawnTime = 0;
