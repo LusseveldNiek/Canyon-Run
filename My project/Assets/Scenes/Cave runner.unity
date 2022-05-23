@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 1252927838}
   - component: {fileID: 1252927837}
   m_Layer: 0
-  m_Name: Respawn
+  m_Name: RespawnPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1661,7 +1661,7 @@ Transform:
   m_GameObject: {fileID: 1754851212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -27.64, y: -2.1017349, z: 12.24}
-  m_LocalScale: {x: 13.468, y: 1, z: 6.6917}
+  m_LocalScale: {x: 13.468, y: 1, z: 4.5136185}
   m_Children:
   - {fileID: 818612387}
   - {fileID: 614732651}
@@ -1758,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 1846428211}
   m_LocalRotation: {x: -0, y: -0, z: 0.5636195, w: 0.8260345}
   m_LocalPosition: {x: -34.9, y: -1.2157494, z: 12.65}
-  m_LocalScale: {x: 1, y: 26.456812, z: 7.5023656}
+  m_LocalScale: {x: 1, y: 26.456812, z: 5.0604205}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
