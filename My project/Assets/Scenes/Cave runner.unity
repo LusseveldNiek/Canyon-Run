@@ -1404,6 +1404,7 @@ GameObject:
   - component: {fileID: 1081649759}
   - component: {fileID: 1081649761}
   - component: {fileID: 1081649760}
+  - component: {fileID: 1081649762}
   m_Layer: 5
   m_Name: ActualCounter
   m_TagString: Untagged
@@ -1463,7 +1464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: 
 --- !u!222 &1081649761
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1472,6 +1473,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081649758}
   m_CullTransparentMesh: 1
+--- !u!114 &1081649762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081649758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7714965963d9f124d8f0aa5c88d0e32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterFloat: 0
+  t: {fileID: 1081649760}
 --- !u!1 &1114811760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2553,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &1673280910
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3079,7 +3094,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Death Counter: '
+  m_Text: 'Death counter: '
 --- !u!222 &1947001937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3148,6 +3163,7 @@ MonoBehaviour:
   respawn: 0
   player: {fileID: 8782516239998843465, guid: 6773fb3edf0f91643a6a6e4293b2be72, type: 3}
   spawn: {fileID: 1252927835}
+  counter: 0
 --- !u!1 &2001099595
 GameObject:
   m_ObjectHideFlags: 0

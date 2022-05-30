@@ -7,6 +7,7 @@ public class Spawn : MonoBehaviour
     public bool respawn;
     public GameObject player;
     public GameObject spawn;
+    public float counter;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +15,7 @@ public class Spawn : MonoBehaviour
         {
             Destroy(collision.transform.gameObject);
             respawn = true;
+            counter += 1;
             
         }
 
