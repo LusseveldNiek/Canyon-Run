@@ -15,14 +15,15 @@ public class SpawnFallingStones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int x = Random.Range(9, 9);
-        int y = Random.Range(12, 12);
-        int z = Random.Range(17, 17);
+        int x = Random.Range(7, 11);
+        int y = Random.Range(14, 14);
+        int z = Random.Range(8, 28);
         time += Time.deltaTime;
-        if(time > 3)
+        if(time > 1)
         {
-            time = 0;
             GameObject fallingStonePrefab = Instantiate(fallingStone, transform.position = new Vector3(x, y, z), fallingStone.transform.rotation);
+            time = 0;
+            
         }
     }
 }
