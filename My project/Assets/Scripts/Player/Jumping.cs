@@ -20,6 +20,16 @@ public class Jumping : MonoBehaviour
        isGrounded = true;
    }
 
+   void OnCollisionExit()
+   {
+       isGrounded = false;
+   }
+
+   void OnCollisionEnter()
+   {
+       isGrounded = true;
+   }
+
    void Update() 
    {
        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
