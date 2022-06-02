@@ -7,6 +7,7 @@ public class WallHolding : MonoBehaviour
     public Rigidbody r;
     public GameObject speler;
     public float heightBackToNormal;
+    public float yPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,26 +17,32 @@ public class WallHolding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerStay(Collider other)
+    {
+        if(other.transform.gameObject.tag == "wall")
+        {
+            //transform.position.y = Mathf.Clamp(transform.position.y, 0, 0);
+            Jumping otherScript = speler.GetComponent<Jumping>();
+            otherScript.height = 0;
+            r.useGravity = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
     {
         if(other.transform.gameObject.tag == "wall")
         {
 
         
-            r.mass = 0;
             Jumping otherScript = speler.GetComponent<Jumping>();
-            otherScript.height = 0;
-            
+            otherScript.height = heightBackToNormal;
+            r.useGravity = true;
         }
-    }
 
-    void OnCollisionExit(Collision other)
-    {
-        Jumping otherScript = speler.GetComponent<Jumping>();
-        r.mass = 1;
-        otherScript.height = heightBackToNormal;
     }
 }
