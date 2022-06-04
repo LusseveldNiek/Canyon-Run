@@ -19,7 +19,7 @@ public class MovementSlinger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed += Time.deltaTime * 14;
+        speed += Time.deltaTime * 11;
         time += Time.deltaTime;
         if(time < 7)
         {
