@@ -19,15 +19,15 @@ public class MovementSlinger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed += Time.deltaTime * 11;
+        speed += Time.deltaTime * 17;
         time += Time.deltaTime;
-        if(time < 7)
+        if(time < 4)
         {
              
              transform.Rotate(Vector3.right * speed * Time.deltaTime);
         }
         
-        if(time > 7)
+        if(time > 4)
         {
             if(reset == true)
             {
@@ -41,7 +41,7 @@ public class MovementSlinger : MonoBehaviour
         if(reset == false)
         {
             transform.Rotate(Vector3.left * speed * Time.deltaTime);
-            if(time > 14)
+            if(time > 8)
             {
                 time = 0;
                 speed = 0;
