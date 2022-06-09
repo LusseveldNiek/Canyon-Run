@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public Vector3 v;
     public float speed;
+    public bool stand;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +16,21 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transform.Translate(v * speed * Time.deltaTime);
+        Jumping jumping = GetComponent<Jumping>();
+        stand = jumping.isGrounded;
 
+        transform.Translate(v * speed * Time.deltaTime);
 
+        if(stand == true)
+        {
+            v.x = Input.GetAxis("Horizontal");
+            v.z = Input.GetAxis("Vertical");
+        }
     }
 
     
 
-    void OnCollisionStay()
-    {
-        v.x = Input.GetAxis("Horizontal");
-        v.z = Input.GetAxis("Vertical");
-       
-    }
+   
 
     
 
