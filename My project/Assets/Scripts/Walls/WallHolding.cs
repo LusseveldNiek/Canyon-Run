@@ -8,6 +8,8 @@ public class WallHolding : MonoBehaviour
     public GameObject speler;
     public float heightBackToNormal;
     public float yPosition;
+    public float force;
+    public float forceUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +26,45 @@ public class WallHolding : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.transform.gameObject.tag == "wall")
+        if(other.transform.gameObject.tag == "wallLeft")
         {
-            //transform.position.y = Mathf.Clamp(transform.position.y, 0, 0);
+            
             Jumping otherScript = speler.GetComponent<Jumping>();
             otherScript.height = 0;
-            r.useGravity = true;
+            r.useGravity = false;
+            if(Input.GetButtonDown("Jump"))
+            {
+                r.AddForce(transform.right * force);
+                r.AddForce(transform.up * forceUp);
+            }
+        }
+
+        if(other.transform.gameObject.tag == "wallRight")
+        {
+            
+            Jumping otherScript = speler.GetComponent<Jumping>();
+            otherScript.height = 0;
+            r.useGravity = false;
+            if(Input.GetButtonDown("Jump"))
+            {
+                r.AddForce(transform.right * -force);
+                r.AddForce(transform.up * forceUp);
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if(other.transform.gameObject.tag == "wall")
+        if(other.transform.gameObject.tag == "wallLeft")
+        {
+
+        
+            Jumping otherScript = speler.GetComponent<Jumping>();
+            otherScript.height = heightBackToNormal;
+            r.useGravity = true;
+        }
+
+        if(other.transform.gameObject.tag == "wallRight")
         {
 
         
@@ -45,4 +74,7 @@ public class WallHolding : MonoBehaviour
         }
 
     }
+
+    
+     
 }

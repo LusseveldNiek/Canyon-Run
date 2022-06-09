@@ -8,6 +8,8 @@ TagManager:
   - RollendeBallen
   - wall
   - finish
+  - wallLeft
+  - wallRight
   layers:
   - Default
   - TransparentFX
