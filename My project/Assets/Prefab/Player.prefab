@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v: {x: 0, y: 0, z: 0}
   speed: 5
+  stand: 0
 --- !u!114 &8782516239998843471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41bb9a931e444b4f8c8797e5b17a9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  sceneChanging: 0
+  moving: 0
+  cam: {fileID: 8782516240994157122}
 --- !u!114 &1980704096280686945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +182,8 @@ MonoBehaviour:
   yPosition: 0
   force: 400
   forceUp: 200
+  yPos: 0
+  speed: 0
 --- !u!1 &8782516240994157123
 GameObject:
   m_ObjectHideFlags: 0
