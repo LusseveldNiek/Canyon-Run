@@ -11,6 +11,7 @@ public class WallHolding : MonoBehaviour
     public float force;
     public float forceUp;
     public float yPos;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,20 +28,24 @@ public class WallHolding : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        
         if(other.transform.gameObject.tag == "wallLeft")
         {
+            transform.Rotate(0, 0, -17);
             yPos = Mathf.Clamp(transform.position.y, transform.position.y, transform.position.y);
         }
 
         if(other.transform.gameObject.tag == "wallRight")
         {
+            transform.Rotate(0, 0, 34);
             yPos = Mathf.Clamp(transform.position.y, transform.position.y, transform.position.y);
         }
     }
     void OnTriggerStay(Collider other)
     {
         if(other.transform.gameObject.tag == "wallLeft")
-        {
+        {   
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
             transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
             Jumping otherScript = speler.GetComponent<Jumping>();
             otherScript.height = 0;
@@ -54,6 +59,7 @@ public class WallHolding : MonoBehaviour
 
         if(other.transform.gameObject.tag == "wallRight")
         {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
             transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
             Jumping otherScript = speler.GetComponent<Jumping>();
             otherScript.height = 0;
@@ -68,24 +74,13 @@ public class WallHolding : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.transform.gameObject.tag == "wallLeft")
-        {
-
+        transform.Rotate(0, 0, 0);
+        Jumping otherScript = speler.GetComponent<Jumping>();
+        otherScript.height = heightBackToNormal;
+        r.useGravity = true;
         
-            Jumping otherScript = speler.GetComponent<Jumping>();
-            otherScript.height = heightBackToNormal;
-            r.useGravity = true;
-        }
 
-        if(other.transform.gameObject.tag == "wallRight")
-        {
-
-        
-            Jumping otherScript = speler.GetComponent<Jumping>();
-            otherScript.height = heightBackToNormal;
-            r.useGravity = true;
-        }
-
+      
     }
 
     
