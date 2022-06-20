@@ -74,10 +74,22 @@ public class WallHolding : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        transform.Rotate(0, 0, 0);
-        Jumping otherScript = speler.GetComponent<Jumping>();
-        otherScript.height = heightBackToNormal;
-        r.useGravity = true;
+        if(other.transform.gameObject.tag == "wallLeft")
+        {
+            transform.Rotate(0, 0, 17);
+            Jumping otherScript = speler.GetComponent<Jumping>();
+            otherScript.height = heightBackToNormal;
+            r.useGravity = true;
+        }
+
+        if(other.transform.gameObject.tag == "wallRight")
+        {
+            transform.Rotate(0, 0, -34);
+            Jumping otherScript = speler.GetComponent<Jumping>();
+            otherScript.height = heightBackToNormal;
+            r.useGravity = true;
+        }
+        
         
 
       
