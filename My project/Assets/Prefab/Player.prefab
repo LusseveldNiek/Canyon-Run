@@ -183,7 +183,7 @@ MonoBehaviour:
   force: 400
   forceUp: 200
   yPos: 0
-  speed: 0
+  speed: 4
 --- !u!1 &8782516240994157123
 GameObject:
   m_ObjectHideFlags: 0
