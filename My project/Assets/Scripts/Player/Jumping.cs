@@ -8,6 +8,8 @@ public class Jumping : MonoBehaviour
    public float height;
    Rigidbody rb;
    public bool isGrounded;
+   public RaycastHit hit;
+   public float distance;
    // Start is called before the first frame update
    void Start()
    {
@@ -15,27 +17,23 @@ public class Jumping : MonoBehaviour
        v = new Vector3(0.0f, 5.0f, 0.0f);
    }
 
-   void OnCollisionStay()
-   {
-       isGrounded = true;
-   }
-
-   void OnCollisionExit()
-   {
-       isGrounded = false;
-   }
-
-   void OnCollisionEnter()
-   {
-       isGrounded = true;
-   }
-
    void Update() 
    {
+
        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
        {
            rb.AddForce(v * height, ForceMode.Impulse);
            isGrounded = false;
+       }
+
+       if(Physics.Raycast(transform.position, -transform.up, out hit, distance))
+       {
+           isGrounded = true;
+       }
+
+       else
+       {
+              isGrounded = false;
        }
    }
 }

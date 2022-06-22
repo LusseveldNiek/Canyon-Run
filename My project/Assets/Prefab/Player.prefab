@@ -132,6 +132,7 @@ MonoBehaviour:
   v: {x: 0, y: 0, z: 0}
   height: 0.7
   isGrounded: 0
+  distance: 1
 --- !u!54 &8782516239998843464
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -184,6 +185,9 @@ MonoBehaviour:
   forceUp: 200
   yPos: 0
   speed: 4
+  rotationSpeed: 0
+  rotationReset: 0
+  moving: 0
 --- !u!1 &8782516240994157123
 GameObject:
   m_ObjectHideFlags: 0
