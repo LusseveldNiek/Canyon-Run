@@ -21,7 +21,7 @@ public class Force : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            GameObject _exp = Instantiate(exp, transform.position, transform.rotation);
+            GameObject _exp = Instantiate(exp, other.transform.position, transform.rotation);
             Destroy(_exp, 3.0f);
             KnockBack();
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallHolding : MonoBehaviour
+public class WallRunning : MonoBehaviour
 {
     public Rigidbody r;
     public GameObject speler;

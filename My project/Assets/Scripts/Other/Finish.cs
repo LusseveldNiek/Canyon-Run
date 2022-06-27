@@ -9,20 +9,12 @@ public class Finish : MonoBehaviour
     public bool sceneChanging;
     public float moving;
     public Transform cam;
+    public RaycastHit hit;
+    public float range;
 
-    void OnTriggerEnter(Collider other)
-    {
-        
-        if(other.gameObject.tag == "finish")
-        {
-        
-        
-            cam.Rotate(-20, 7, 1);
-            cam.position = new Vector3(1, 1, 72);
-            sceneChanging = true;
-        }
-        
-    }
+    
+   
+    
 
     void Start()
     {
@@ -31,7 +23,18 @@ public class Finish : MonoBehaviour
 
     void Update()
     {
-
+        if(Physics.Raycast(transform.position, transform.forward, out hit, range))
+        {
+            if(hit.transform.gameObject.tag == "finish")
+            {
+                cam.Rotate(-20, 7, 1);
+                cam.position = new Vector3(1, 1, 72);
+                sceneChanging = true;
+                range = 0;
+            }
+        }
+        
+    
        
         if(sceneChanging == true)
         {

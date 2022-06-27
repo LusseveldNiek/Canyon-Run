@@ -165,6 +165,7 @@ MonoBehaviour:
   sceneChanging: 0
   moving: 0
   cam: {fileID: 8782516240994157122}
+  range: 3
 --- !u!114 &1980704096280686945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,10 +183,10 @@ MonoBehaviour:
   heightBackToNormal: 0.7
   yPosition: 0
   force: 400
-  forceUp: 200
+  forceUp: 300
   yPos: 0
-  speed: 4
-  rotationSpeed: 0
+  speed: 3
+  rotationSpeed: 8
   rotationReset: 0
   moving: 0
 --- !u!1 &8782516240994157123

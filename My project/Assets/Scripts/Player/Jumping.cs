@@ -26,14 +26,24 @@ public class Jumping : MonoBehaviour
            isGrounded = false;
        }
 
-       if(Physics.Raycast(transform.position, -transform.up, out hit, distance))
-       {
-           isGrounded = true;
-       }
-
-       else
-       {
-              isGrounded = false;
-       }
+      
    }
+
+   void OnCollisionStay(Collision other)
+   {
+       isGrounded = true;
+
+       
+
+   }
+
+   void OnCollisionExit(Collision other)
+   {
+       isGrounded = false;
+
+       
+
+   }
+
+  
 }
