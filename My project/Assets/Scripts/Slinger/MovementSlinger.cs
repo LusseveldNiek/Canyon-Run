@@ -24,7 +24,7 @@ public class MovementSlinger : MonoBehaviour
         if(time < 4)
         {
              
-             transform.Rotate(Vector3.right * speed * Time.deltaTime);
+             transform.Rotate(Vector3.up * speed * Time.deltaTime);
         }
         
         if(time > 4)
@@ -40,7 +40,7 @@ public class MovementSlinger : MonoBehaviour
 
         if(reset == false)
         {
-            transform.Rotate(Vector3.left * speed * Time.deltaTime);
+            transform.Rotate(-Vector3.up * speed * Time.deltaTime);
             if(time > 8)
             {
                 time = 0;
