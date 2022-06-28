@@ -21,11 +21,10 @@ public class Movement : MonoBehaviour
 
         transform.Translate(v * speed * Time.deltaTime);
 
-        if(stand == true)
-        {
-            v.x = Input.GetAxis("Horizontal");
-            v.z = Input.GetAxis("Vertical");
-        }
+       
+        v.x = Input.GetAxis("Horizontal");
+        v.z = Input.GetAxis("Vertical");
+        
     }
 
     
