@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802020578064048975, guid: f23dc4623b4f92043ad0db36f2f48327, type: 3}
       propertyPath: m_Name
-      value: Rolling-stone-Medium Variant
+      value: Rolling-stone-Medium
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7394101335537285123, guid: f23dc4623b4f92043ad0db36f2f48327, type: 3}

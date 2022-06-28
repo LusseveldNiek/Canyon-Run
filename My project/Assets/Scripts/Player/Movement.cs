@@ -18,14 +18,15 @@ public class Movement : MonoBehaviour
     {
         Jumping jumping = GetComponent<Jumping>();
         stand = jumping.isGrounded;
+        transform.Translate(v * speed * Time.deltaTime); 
+    }
 
-        transform.Translate(v * speed * Time.deltaTime);
-
-       
+    void OnCollisionStay(Collision other)
+    {
         v.x = Input.GetAxis("Horizontal");
         v.z = Input.GetAxis("Vertical");
-        
     }
+       
 
     
 
