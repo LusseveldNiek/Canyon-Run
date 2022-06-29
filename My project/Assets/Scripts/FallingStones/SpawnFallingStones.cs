@@ -15,7 +15,7 @@ public class SpawnFallingStones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int x = Random.Range(-10, 4);
+        int x = Random.Range(-4, 4);
         int y = Random.Range(14, 14);
         int z = Random.Range(-3, 82);
         time += Time.deltaTime;
