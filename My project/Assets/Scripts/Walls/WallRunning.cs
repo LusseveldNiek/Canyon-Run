@@ -15,6 +15,8 @@ public class WallRunning : MonoBehaviour
     public float rotationSpeed;
     public float rotationReset;
     public float moving;
+    public Quaternion startRotation;
+    public float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -102,10 +104,11 @@ public class WallRunning : MonoBehaviour
         {
             moving = 5;
             rotationReset = 0;
+            transform.rotation = Quaternion.Slerp(startRotation, Quaternion.identity, time);
+            time += Time.deltaTime;
             Jumping otherScript = speler.GetComponent<Jumping>();
             otherScript.height = heightBackToNormal;
             r.useGravity = true;
-            transform.Rotate(0, 0, -8);
         }
         
         

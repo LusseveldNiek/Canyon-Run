@@ -19,13 +19,15 @@ public class Movement : MonoBehaviour
         Jumping jumping = GetComponent<Jumping>();
         stand = jumping.isGrounded;
         transform.Translate(v * speed * Time.deltaTime); 
-    }
-
-    void OnCollisionStay(Collision other)
-    {
+        if(stand == true)
+        {
         v.x = Input.GetAxis("Horizontal");
         v.z = Input.GetAxis("Vertical");
+        }
+       
     }
+
+    
        
 
     
