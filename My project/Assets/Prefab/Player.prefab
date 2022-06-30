@@ -358,3 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1225497709}
+  standing: 0
+  playerModel: {fileID: 3268923029389718803}
+  player: {fileID: 2422063576232122477}
