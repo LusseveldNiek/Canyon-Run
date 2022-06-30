@@ -105,3 +105,5 @@ MonoBehaviour:
   exp: {fileID: 7600220778897763647, guid: 8215e21376605fb4eb8361036f3642a5, type: 3}
   expForce: 300
   radius: 3
+  player: {fileID: 0}
+  rigg: {fileID: 0}

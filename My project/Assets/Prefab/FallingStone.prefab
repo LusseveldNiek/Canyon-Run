@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  growSpeed: 0
+  exp: {fileID: 0}
 --- !u!114 &7398289964052423393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +144,5 @@ MonoBehaviour:
   exp: {fileID: 7600220778897763647, guid: 8215e21376605fb4eb8361036f3642a5, type: 3}
   expForce: 700
   radius: 3
+  player: {fileID: 0}
+  rigg: {fileID: 0}

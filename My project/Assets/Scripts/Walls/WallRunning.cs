@@ -7,7 +7,6 @@ public class WallRunning : MonoBehaviour
     public Rigidbody r;
     public GameObject speler;
     public float heightBackToNormal;
-    public float yPosition;
     public float force;
     public float forceUp;
     public float yPos;
@@ -17,6 +16,7 @@ public class WallRunning : MonoBehaviour
     public float moving;
     public Quaternion startRotation;
     public float time;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +49,8 @@ public class WallRunning : MonoBehaviour
     {
         if(other.transform.gameObject.tag == "wallLeft")
         {   
+            animator.SetTrigger("WallLeft");
+            animator.SetBool("IsGrounded", true);
             moving = 0;
             rotationReset += Time.deltaTime;
             if(rotationReset < 1)
@@ -69,6 +71,8 @@ public class WallRunning : MonoBehaviour
 
         if(other.transform.gameObject.tag == "wallRight")
         {
+            animator.SetTrigger("WallRight");
+            animator.SetBool("IsGrounded", true);
             moving = 0;
             rotationReset += Time.deltaTime;
             if(rotationReset < 2)
