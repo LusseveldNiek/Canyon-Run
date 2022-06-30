@@ -32,7 +32,10 @@ public class Jumping : MonoBehaviour
    void OnCollisionStay(Collision other)
    {
        isGrounded = true;
-
+       if(other.gameObject.tag == "wall")
+       {
+           isGrounded = false;
+       }
        
 
    }

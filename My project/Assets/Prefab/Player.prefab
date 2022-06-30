@@ -314,6 +314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adventurer
       objectReference: {fileID: 0}
+    - target: {fileID: 7603786706384944740, guid: 858c7cb1a63925d45a54e227a6bab240, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a686bc2268c8d3446ac316d399d1d448, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858c7cb1a63925d45a54e227a6bab240, type: 3}
 --- !u!1 &3268923029389718803 stripped
