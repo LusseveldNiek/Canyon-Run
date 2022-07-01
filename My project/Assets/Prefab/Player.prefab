@@ -237,7 +237,6 @@ MonoBehaviour:
   r: {fileID: 2422063576232122478}
   speler: {fileID: 2422063576232122477}
   heightBackToNormal: 0.7
-  yPosition: 0
   force: 600
   forceUp: 400
   yPos: 0
@@ -247,6 +246,7 @@ MonoBehaviour:
   moving: 0
   startRotation: {x: 0, y: 0, z: 0, w: 0}
   time: 0
+  animator: {fileID: 1225497709}
 --- !u!1001 &2422063574824454210
 PrefabInstance:
   m_ObjectHideFlags: 0
