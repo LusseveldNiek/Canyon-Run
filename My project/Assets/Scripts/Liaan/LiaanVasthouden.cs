@@ -22,6 +22,7 @@ public class LiaanVasthouden : MonoBehaviour
             {
                 other.gameObject.transform.position = transform.position;
             }   
+
         }
 
       

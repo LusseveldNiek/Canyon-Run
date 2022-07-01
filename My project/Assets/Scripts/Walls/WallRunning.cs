@@ -97,6 +97,7 @@ public class WallRunning : MonoBehaviour
     {
         if(other.transform.gameObject.tag == "wallLeft")
         {
+            animator.ResetTrigger("WallLeft");
             moving = 5;
             rotationReset = 0;
             Jumping otherScript = speler.GetComponent<Jumping>();
@@ -106,6 +107,7 @@ public class WallRunning : MonoBehaviour
 
         if(other.transform.gameObject.tag == "wallRight")
         {
+            animator.ResetTrigger("WallRight");
             moving = 5;
             rotationReset = 0;
             transform.rotation = Quaternion.Slerp(startRotation, Quaternion.identity, time);
