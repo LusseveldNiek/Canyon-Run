@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   v: {x: 0, y: 0, z: 0}
-  height: 0.7
+  height: 1.1
   isGrounded: 0
   distance: 1
 --- !u!54 &2422063576232122478

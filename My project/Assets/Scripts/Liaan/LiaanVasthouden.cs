@@ -15,23 +15,24 @@ public class LiaanVasthouden : MonoBehaviour
    
     public void OnTriggerStay(Collider other)
     {
-        
+        Animator animator = player.GetComponentInChildren<Animator>();
         if(other.gameObject.tag == "Player")
         {
             if(Input.GetButton("Fire1"))
             {
                 other.gameObject.transform.position = transform.position;
-            }   
+                animator.SetBool("Holding", true);
+            }  
+            
+            else
+            {
+                animator.SetBool("Holding", false);
+            }
 
         }
 
       
     }
 
-    public void Update()
-    {
-       
-
-        
-    }
+   
 }
