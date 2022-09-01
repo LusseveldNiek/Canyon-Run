@@ -20,7 +20,7 @@ public class LiaanVasthouden : MonoBehaviour
         {
             if(Input.GetButton("Fire1"))
             {
-                other.gameObject.transform.position = transform.position;
+                other.gameObject.transform.position = gameObject.GetComponent<Collider>().transform.position;
                 animator.SetBool("Holding", true);
             }  
             
