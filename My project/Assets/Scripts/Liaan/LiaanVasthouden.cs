@@ -15,7 +15,7 @@ public class LiaanVasthouden : MonoBehaviour
    
     public void OnTriggerStay(Collider other)
     {
-        Animator animator = player.GetComponentInChildren<Animator>();
+        Animator animator = other.gameObject.GetComponentInChildren<Animator>();
         if(other.gameObject.tag == "Player")
         {
             if(Input.GetButton("Fire1"))
